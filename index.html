@@ -3,15 +3,7 @@
     <head>
         <title>Lily</title>
         <meta charset="utf-8">
-        <style>
-            h1 {
-                font-size: 45px;
-                text-align: center;
-                border-bottom: 1px solid gray;
-                margin: 0;
-                padding: 60px;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body>
@@ -21,15 +13,16 @@
                     <span><a href="2.html">Interesting</a></span>
                     <span><a href="3.html">Now</a></span>                
             </div>
-            <input type="button" value="night" onlick="
-            document.querySelector('body').style.backgroundColor='black';
-            document.querySelector('body').style.color='white';
-            ">
-            <input type="button" value="day" onlick="
-            document.querySelector('body').style.backgroundColor='white';
-            document.querySelector('body').style.color='black';
-            ">
-            <div>이건그냥글이다</div>
+            <input id="night_day" type="button" value="night" onclick="
+            if(document.querySelector('#night_day').value === 'night'){
+                       document.querySelector('body').style.backgroundColor ='black';
+                       document.querySelector('body').style.color ='white';
+                        document.querySelector('#night_day').value = 'day';
+            }else{
+                    document.querySelector('body').style.backgroundColor ='white';
+                    document.querySelector('body').style.color='black';
+                    document.querySelector('#night_day').value = 'night';
+                                                                       }">
             <!--<img src="image1.jpg" width="100" height="200">-->
 
                 <!-- 라이브리 시티 설치 코드 -->
